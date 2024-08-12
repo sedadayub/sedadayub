@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="login-container">
+        <h2>Enter Access Code</h2>
+        <input type="password" id="access-code" placeholder="Enter your code">
+        <button onclick="checkAccess()">Enter</button>
+    </div>
+
+    <div id="admin-page" style="display: none;">
+        <h1>Admin - Goods Management</h1>
+        <form id="goods-form">
+            <input type="text" id="good-name" placeholder="Name of Goods" required>
+            <input type="number" id="good-price" placeholder="Price" required>
+            <input type="number" id="good-limit" placeholder="Limit" required>
+            <button type="submit">Add Goods</button>
+        </form>
+
+        <h2>Goods List</h2>
+        <ul id="goods-list"></ul>
+    </div>
+
+    <div id="sell-page" style="display: none;">
+        <h1>Sell Goods</h1>
+        <ul id="sell-goods-list"></ul>
+        <h2>Total Price of Sold Goods: <span id="total-goods-price">0</span></h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
